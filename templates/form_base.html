@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+    <nav><a href="/get">Form GET</a> | <a href="/post">Form POST</a></nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

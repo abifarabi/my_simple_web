@@ -1,0 +1,14 @@
+{% extends 'form_base.html' %}
+{% block title %}FORM POST{% endblock %}
+{% block content %}
+  <h2>Contoh Form POST</h2>
+  <form method="post">
+    <label>Nama:</label>
+    <input name="nama" placeholder="Masukkan nama">
+    <button type="submit">Kirim (POST)</button>
+  </form>
+
+  {% if pesan %}
+    <p class="hasil">{{ pesan }}</p>
+  {% endif %}
+{% endblock %}

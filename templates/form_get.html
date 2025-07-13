@@ -1,0 +1,14 @@
+{% extends 'form_base.html' %}
+{% block title %}FORM GET{% endblock %}
+{% block content %}
+  <h2 style="font-family: 'Courier New', Courier, monospace;">Contoh FORM GET</h2>
+  <form method="get">
+    <label>Nama:</label>
+    <input name="nama" placeholder="Masukkan nama">
+    <button type="submit">Kirim (GET)</button>
+  </form>
+
+  {% if nama %}
+    <p class="hasil">Halo, {{ nama }}! Data dikirim lewat query string (?nama={{ nama }}).</p>
+  {% endif %}
+{% endblock %}
